@@ -48,7 +48,18 @@ public class Main {
             }
 //irá exibir uma mensagem na tela com a pontuação atual(concatenação)
             System.out.println("Sua pontuação atual é: " + pontos);
+
+            System.out.println("Deseja continuar jogando? (s/n): ");
+            String continuar = scanner.next();
+            if (!continuar.equalsIgnoreCase("s")) {
+                break;
+            }
         }
+//tive que colocar o sinal de aspas duplas na pontuação final para que a mensagem saisse da forma correta.
+        System.out.println("\n--- Fim do Jogo ---");
+        System.out.println("Sua pontuação final: " + pontos);
+        System.out.println("Números acertados: " + acertos);
+        System.out.println("Números errados: " + erros);
 
 
     }
