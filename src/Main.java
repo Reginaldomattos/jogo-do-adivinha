@@ -37,7 +37,17 @@ public class Main {
             // criando a condição para o usuário digitar na tela e receber o resultado .
             if (palpite == numeroSorteado) {
                 pontos += 10;
+                acertos.add(palpite);
+                System.out.println("Parabéns! Você acertou!");
+            } else if (Math.abs(palpite - numeroSorteado) == 1) {
+                pontos += 5;
+                System.out.println("Quase lá! Você estava a 1 de distância.");
+            } else {
+                erros.add(palpite);
+                System.out.println("Errou!");
             }
+//irá exibir uma mensagem na tela com a pontuação atual(concatenação)
+            System.out.println("Sua pontuação atual é: " + pontos);
         }
 
 
